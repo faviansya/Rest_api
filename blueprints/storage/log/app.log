@@ -1,0 +1,136 @@
+[2019-02-21 16:56:01,947]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": {"message": "The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again."}}GET
+[2019-02-21 16:56:09,552]{/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /client [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/jwt/api_jws.py", line 180, in _load
+    signing_input, crypto_segment = jwt.rsplit(b'.', 1)
+ValueError: not enough values to unpack (expected 2, got 1)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    verify_jwt_in_request()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 267, in _decode_jwt_from_request
+    decoded_token = decode_token(encoded_token, csrf_token)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_jwt_extended/utils.py", line 80, in decode_token
+    encoded_token, verify=False, algorithms=config.algorithm
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/jwt/api_jwt.py", line 84, in decode
+    payload, _, _, _ = self._load(jwt)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/jwt/api_jws.py", line 183, in _load
+    raise DecodeError('Not enough segments')
+jwt.exceptions.DecodeError: Not enough segments
+[2019-02-21 16:56:09,560]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": {"message": "Internal Server Error"}}GET
+[2019-02-21 16:56:18,989]{/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /client [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 103, in wrapper
+    verify_jwt_in_request()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 32, in verify_jwt_in_request
+    jwt_data = _decode_jwt_from_request(request_type='access')
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_jwt_extended/view_decorators.py", line 291, in _decode_jwt_from_request
+    raise NoAuthorizationError(errors[0])
+flask_jwt_extended.exceptions.NoAuthorizationError: Missing Authorization Header
+[2019-02-21 16:56:18,990]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": {"message": "Internal Server Error"}}GET
+[2019-02-21 16:56:52,650]{/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py:1761} ERROR - Exception on /client [GET]
+Traceback (most recent call last):
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/ext/declarative/clsregistry.py", line 293, in __call__
+    x = eval(self.arg, globals(), self._dict)
+  File "<string>", line 1, in <module>
+NameError: name 'User' is not defined
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py", line 1813, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/app.py", line 1799, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_restful/__init__.py", line 458, in wrapper
+    resp = resource(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask/views.py", line 88, in view
+    return self.dispatch_request(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_restful/__init__.py", line 573, in dispatch_request
+    resp = meth(*args, **kwargs)
+  File "/home/alphatech/project_api/project_api/project/blueprints/client/resources.py", line 26, in get
+    qry = Client.query
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/flask_sqlalchemy/__init__.py", line 512, in __get__
+    mapper = orm.class_mapper(type)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/base.py", line 433, in class_mapper
+    mapper = _inspect_mapped_class(class_, configure=configure)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/base.py", line 412, in _inspect_mapped_class
+    mapper._configure_all()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 1315, in _configure_all
+    configure_mappers()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 3194, in configure_mappers
+    mapper._post_configure_properties()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/mapper.py", line 1924, in _post_configure_properties
+    prop.init()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/interfaces.py", line 192, in init
+    self.do_init()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/relationships.py", line 1750, in do_init
+    self._process_dependent_arguments()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/relationships.py", line 1812, in _process_dependent_arguments
+    self.target = self.mapper.mapped_table
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/util/langhelpers.py", line 839, in __get__
+    obj.__dict__[self.__name__] = result = self.fget(obj)
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/orm/relationships.py", line 1723, in mapper
+    argument = self.argument()
+  File "/home/alphatech/project_api/project_api/lib/python3.6/site-packages/sqlalchemy/ext/declarative/clsregistry.py", line 305, in __call__
+    % (self.prop.parent, self.arg, n.args[0], self.cls)
+sqlalchemy.exc.InvalidRequestError: When initializing mapper Mapper|Client|client, expression 'User' failed to locate a name ("name 'User' is not defined"). If this is a class name, consider adding this relationship() to the <class 'blueprints.client.Client'> class after both dependent classes have been defined.
+[2019-02-21 16:56:52,659]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": {"message": "Internal Server Error"}}GET
+[2019-02-21 16:57:20,465]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": []}GET
+[2019-02-21 16:58:07,606]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": []}GET
+[2019-02-21 16:59:31,871]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": null, "response": {"message": {"client_key": "Missing required parameter in the JSON body"}}}POST
+[2019-02-21 17:00:27,667]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": null, "response": {"message": {"client_key": "Missing required parameter in the JSON body"}}}POST
+[2019-02-21 17:04:29,181]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": null, "response": {"message": {"client_key": "Missing required parameter in the JSON body"}}}POST
+[2019-02-21 17:06:38,355]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": null, "response": {"client_id": 1, "client_key": null, "client_secret": null, "client_status": null}}POST
+[2019-02-21 17:06:54,368]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"client_key": "client 1", "client_secret": "secret 1", "client_status": "basic"}, "response": {"client_id": 2, "client_key": "client 1", "client_secret": "secret 1", "client_status": "basic"}}POST
+[2019-02-21 17:07:43,844]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"client_key": "client 2", "client_secret": "secret 2", "client_status": "basic"}, "response": {"client_id": 2, "client_key": "client 2", "client_secret": "secret 2", "client_status": "basic"}}PUT
+[2019-02-21 17:07:50,488]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"client_key": "client 2", "client_secret": "secret 2", "client_status": "basic"}, "response": "Deleted"}DELETE
+[2019-02-21 17:07:56,990]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": [{"client_id": 2, "client_key": "client 2", "client_secret": "secret 2", "client_status": "basic"}]}GET
+[2019-02-21 17:08:10,809]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"client_key": "client 3", "client_secret": "secret 3", "client_status": "basic"}, "response": {"client_id": 3, "client_key": "client 3", "client_secret": "secret 3", "client_status": "basic"}}POST
+[2019-02-21 17:08:21,088]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"client_key": "client 4", "client_secret": "secret 4", "client_status": "vip"}, "response": {"client_id": 4, "client_key": "client 4", "client_secret": "secret 4", "client_status": "vip"}}POST
+[2019-02-21 17:08:30,011]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"client_key": "client 5", "client_secret": "secret 5", "client_status": "basic"}, "response": {"client_id": 5, "client_key": "client 5", "client_secret": "secret 5", "client_status": "basic"}}POST
+[2019-02-21 17:08:42,893]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"client_key": "client 6", "client_secret": "secret 6", "client_status": "vip"}, "response": {"client_id": 6, "client_key": "client 6", "client_secret": "secret 6", "client_status": "vip"}}POST
+[2019-02-21 17:41:24,582]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": []}GET
+[2019-02-21 17:50:01,056]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "boysz", "password": "fdsfsdfs", "status": "True"}, "response": {"id": 1, "username": "boysz", "password": "fdsfsdfs", "status": "True"}}POST
+[2019-02-21 17:50:23,644]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "awesam", "password": "63re56r", "status": "False"}, "response": {"id": 2, "username": "awesam", "password": "63re56r", "status": "False"}}POST
+[2019-02-21 17:50:36,867]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "foreve", "password": "eyry546yre", "status": "True"}, "response": {"id": 3, "username": "foreve", "password": "eyry546yre", "status": "True"}}POST
+[2019-02-21 17:52:41,954]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "boysz", "password": "fdsfsdfs", "status": "True"}, "response": {"id": 1, "username": "boysz", "password": "fdsfsdfs", "status": "True"}}POST
+[2019-02-21 17:52:54,723]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "awesam", "password": "63re56r", "status": "False"}, "response": {"id": 2, "username": "awesam", "password": "63re56r", "status": "False"}}POST
+[2019-02-21 17:54:14,113]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": []}GET
+[2019-02-21 17:54:24,371]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "boysz", "password": "fdsfsdfs", "status": "vip"}, "response": {"id": 1, "username": "boysz", "password": "fdsfsdfs", "status": "vip"}}POST
+[2019-02-21 17:54:41,184]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "awesam", "password": "63re56r", "status": "basic"}, "response": {"id": 2, "username": "awesam", "password": "63re56r", "status": "basic"}}POST
+[2019-02-21 17:54:52,300]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "foreve", "password": "eyry546yre", "status": "basic"}, "response": {"id": 3, "username": "foreve", "password": "eyry546yre", "status": "basic"}}POST
+[2019-02-21 17:55:05,986]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "mimiperi", "password": "fsojir9e3", "status": "vip"}, "response": {"id": 4, "username": "mimiperi", "password": "fsojir9e3", "status": "vip"}}POST
+[2019-02-21 17:55:21,740]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "theBoys", "password": "fosjrew9", "status": "basic"}, "response": {"id": 5, "username": "theBoys", "password": "fosjrew9", "status": "basic"}}POST
+[2019-02-21 17:55:34,514]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "loners", "password": "fete5", "status": "basic"}, "response": {"id": 6, "username": "loners", "password": "fete5", "status": "basic"}}POST
+[2019-02-21 17:55:49,201]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:32} WARNING - REQUEST LOG	{"request": {"username": "unch", "password": "j980943f", "status": "vip"}, "response": {"id": 7, "username": "unch", "password": "j980943f", "status": "vip"}}POST
+[2019-02-21 17:55:53,688]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": [{"id": 1, "username": "boysz", "password": "fdsfsdfs", "status": "vip"}, {"id": 2, "username": "awesam", "password": "63re56r", "status": "basic"}, {"id": 3, "username": "foreve", "password": "eyry546yre", "status": "basic"}, {"id": 4, "username": "mimiperi", "password": "fsojir9e3", "status": "vip"}, {"id": 5, "username": "theBoys", "password": "fosjrew9", "status": "basic"}]}GET
+[2019-02-21 17:56:00,270]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": {"id": 2, "username": "awesam", "password": "63re56r", "status": "basic"}}GET
+[2019-02-21 17:56:14,055]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {"p": "2", "rp": "5"}, "response": [{"id": 6, "username": "loners", "password": "fete5", "status": "basic"}, {"id": 7, "username": "unch", "password": "j980943f", "status": "vip"}]}GET
+[2019-02-21 17:57:37,130]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {"username": "boysz", "password": "fdsfsdfs"}, "response": {"message": "The requested URL was not found on the server.  If you entered the URL manually please check your spelling and try again."}}GET
+[2019-02-21 17:57:50,572]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {"username": "boysz", "password": "fdsfsdfs"}, "response": {"token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpYXQiOjE1NTA3NDY2NzAsIm5iZiI6MTU1MDc0NjY3MCwianRpIjoiNGY2MDhkMzAtMGJlMS00YTQyLWIxMTQtNDk1MjQ1MjdhYTM1IiwiZXhwIjoxNTUwODMzMDcwLCJpZGVudGl0eSI6eyJpZCI6MSwidXNlcm5hbWUiOiJib3lzeiIsInBhc3N3b3JkIjoiZmRzZnNkZnMiLCJzdGF0dXMiOiJ2aXAifSwiZnJlc2giOmZhbHNlLCJ0eXBlIjoiYWNjZXNzIiwidXNlcl9jbGFpbXMiOnsiaWQiOjEsInVzZXJuYW1lIjoiYm95c3oiLCJwYXNzd29yZCI6ImZkc2ZzZGZzIiwic3RhdHVzIjoidmlwIn19.svkKIeEb7ZovCweK6LZhxMMvbbSrbAR5kWpuVamRxMc"}}GET
+[2019-02-21 18:22:17,812]{/home/alphatech/project_api/project_api/project/blueprints/__init__.py:30} WARNING - REQUEST LOG	{"request": {}, "response": [{"id": 1, "username": "boysz", "password": "fdsfsdfs", "status": "vip"}, {"id": 2, "username": "awesam", "password": "63re56r", "status": "basic"}, {"id": 3, "username": "foreve", "password": "eyry546yre", "status": "basic"}, {"id": 4, "username": "mimiperi", "password": "fsojir9e3", "status": "vip"}, {"id": 5, "username": "theBoys", "password": "fosjrew9", "status": "basic"}]}GET
