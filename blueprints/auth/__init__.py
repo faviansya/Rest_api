@@ -10,7 +10,6 @@ api = Api(bp_auth)
 
 class CreateTokenResources(Resource):
     def get(self):
-
         parser = reqparse.RequestParser()
         parser.add_argument('username', location='args', required=True)
         parser.add_argument('password', location = 'args', required = True)

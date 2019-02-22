@@ -2,9 +2,9 @@ import logging
 from blueprints import db
 from flask_restful import fields
 
-class Member(db.Model):
+class Playlist(db.Model):
 
-    __tablename__ = 'client'
+    __tablename__ = 'playlist'
 
     id = db.Column(db.Integer, primary_key = True, autoincrement = True)
     playlist = db.Column(db.String(255))
@@ -20,7 +20,7 @@ class Member(db.Model):
         'status' : fields.String
     }
 
-    def __init__(self, id, name, mood, status, time):
+    def __init__(self, id, playlist, mood, status, time, created_by):
         self.id = id
         self.playlist = playlist
         self.mood = mood
@@ -29,4 +29,4 @@ class Member(db.Model):
         self.create_by = create_by
 
     def __repr__(self):
-        return '<Member %r>' % self.id
+        return '<Playlist %r>' % self.id
